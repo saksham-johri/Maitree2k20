@@ -29,21 +29,7 @@
       <div class="sk-spinner sk-spinner-rotating-plane"></div>
     </div>
 <!-- Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <!-- Iframe for form -->
-      </div>
-    </div>
-  </div>
-</div>
+
       
       <!-- navigation section -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -78,13 +64,44 @@
 
     <!-- home section -->
     <section id="home" style="height: -webkit-fill-available">
-        <section></section>
       <div class="container">
         <div class="row">
           <div>
-            <h1 class="wow bounceInDown rotate">Maitree 2020</h1>
-              <h4>Divided By Colleges United By Sports</h4>
-            <h2 class="wow bounce">National Sports Fest</h2>
+            <h1 class="wow bounceInDown rotate" style="font-family: cursive;text-shadow: 5px 3px #812820;">Maitree 2020</h1>
+              <h4 style="font-family: cursive;">Divided By Colleges United By Sports</h4>
+            <h2 class="wow bounce" style="font-family: cursive;">National Sports Fest</h2>
+              <p id="demo" style="font-size: 40px; margin-top: 30px; font-weight: 600; font-family: cursive;"></p>
+              <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Feb 28, 2020 10:00:00").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function() 
+                {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+    
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+    
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+    
+                // If the count down is over, write some text 
+                if (distance < 0) 
+                {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "";
+                }
+                }, 1000);
+              </script>
             <a href="#about" class="btn btn-default smoothScroll">Dive in</a>
           </div>
         </div>
@@ -321,7 +338,7 @@
         <h4 style="margin-top: 45px;"><a target="_blank" href="RuleBook.pdf" style="color: white">Rule Book</a></h4>
     </section>
     <!-- Gallery section -->
-    <div id="gallery">
+    <div id="gallery" style="background-color: #ccdec8">
       <div class="container">
         <div class="row">
           <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 title">
@@ -633,7 +650,6 @@
     <!-- TESTIMONIAL -->
     <section
       id="testimonial"
-      data-stellar-background-ratio="0.5"
       class="testimonial-section"
     >
       <div class="container maps-container">
@@ -879,6 +895,54 @@
             </div>
           </div>
           <div class="row">
+              <div class="col-md-3 col-sm-3">
+              <div
+                class="team-card rounded team-thumb wow bounceIn"
+                data-wow-delay="0.2s"
+              >
+                <img
+                  src="images/team/core/shivam.jpg"
+                  class="img-responsive"
+                  alt=""
+                />
+                <div class="team-hover">
+                  <div class="team-item">
+                    <ul class="social-icon">
+                      <li>
+                        <a
+                          href="https://m.facebook.com/profile.php?id=100005846345837&ref=content_filter"
+                          target="_blank"
+                          class="fa fa-facebook"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/asthana_jii/?hl=en"
+                          target="_blank"
+                          class="fa fa-instagram"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:shivam.asthana_cvl16@gla.ac.in"
+                          target="_blank"
+                          class="fa fa-envelope"
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <h4>Shivam Asthana</h4>
+                  <p>Organizer</p>
+                <p>
+                  <a href="tel:+917895069690" class="fa fa-mobile">
+                    +91-7895069690</a
+                  >
+                </p>
+              </div>
+            </div>
             <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow bounceIn"
@@ -919,6 +983,7 @@
               </div>
               <div class="team-info">
                 <h4>Animesh Upadhyay</h4>
+                  <p>Co-Organizer</p>
                 <p>
                   <a href="tel:+918979369525" class="fa fa-mobile">
                     +91-8979369525</a
@@ -966,6 +1031,7 @@
               </div>
               <div class="team-info">
                 <h4>Krishanu Tripathi</h4>
+                  <p>Co-Organizer</p>
                 <p>
                   <a href="tel:+918601080757" class="fa fa-mobile">
                     +91-8601080757</a
@@ -1013,6 +1079,7 @@
               </div>
               <div class="team-info">
                 <h4>Sandeep Singh</h4>
+                  <p>Treasurer</p>
                 <p>
                   <a href="tel:+919012890330" class="fa fa-mobile">
                     +91-9012890330</a
@@ -1020,6 +1087,9 @@
                 </p>
               </div>
             </div>
+            
+          </div>
+          <div class="row">
             <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow bounceIn"
@@ -1060,58 +1130,10 @@
               </div>
               <div class="team-info">
                 <h4>Shilpa Tyagi</h4>
+                  <p>Creative Head</p>
                 <p>
                   <a href="tel:+919910445029" class="fa fa-mobile">
                     +91-9910445029</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-sm-3">
-              <div
-                class="team-card rounded team-thumb wow bounceIn"
-                data-wow-delay="0.2s"
-              >
-                <img
-                  src="images/team/core/shivam.jpg"
-                  class="img-responsive"
-                  alt=""
-                />
-                <div class="team-hover">
-                  <div class="team-item">
-                    <ul class="social-icon">
-                      <li>
-                        <a
-                          href="https://m.facebook.com/profile.php?id=100005846345837&ref=content_filter"
-                          target="_blank"
-                          class="fa fa-facebook"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.instagram.com/asthana_jii/?hl=en"
-                          target="_blank"
-                          class="fa fa-instagram"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="mailto:shivam.asthana_cvl16@gla.ac.in"
-                          target="_blank"
-                          class="fa fa-envelope"
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="team-info">
-                <h4>Shivam Asthana</h4>
-                <p>
-                  <a href="tel:+917895069690" class="fa fa-mobile">
-                    +91-7895069690</a
                   >
                 </p>
               </div>
@@ -1156,6 +1178,7 @@
               </div>
                 <div class="team-info">
                 <h4>Nihal Arya</h4>
+                    <p>Technical Head</p>
                 <p>
                   <a href="tel:+917376111911" class="fa fa-mobile">
                     +91-7376111911</a
@@ -1204,11 +1227,11 @@
                 
               <div class="team-info">
                 <h4>Shreayansh Kr. Jaiswal</h4>
+                  <p>Technical Head</p>
                 <p>
                   <a href="tel:+919997986943" class="fa fa-mobile">
                     +91-9997986943</a
-                  ><br>
-                    TECHNICAL HEAD
+                  >
                 </p>
               </div>
             </div>
@@ -1297,10 +1320,11 @@
               </div>
               <div class="team-info">
                 <h4>Vishal Singh</h4>
+                  <p>PR Head</p>
                 <p>
                   <a href="tel:+918477801895" class="fa fa-mobile">
                     +91-8477801895</a>
-                    <p>PR Head</p>
+                    
                 </p>
               </div>
             </div>
@@ -1344,10 +1368,11 @@
               </div>
                 <div class="team-info">
                 <h4>Hariom Singh Chauhan</h4>
+                    <p>Editorial Head</p>
                 <p>
                   <a href="tel:+919969558679" class="fa fa-mobile">
                     +91-9969558679</a>
-                    <p>Editorial Head</p>
+                    
                 </p>
               </div>
             </div>
@@ -1804,6 +1829,54 @@
                 </p>
               </div>
             </div>
+              <div class="col-md-3 col-sm-3">
+              <div
+                class="team-card rounded team-thumb wow flipInX"
+                data-wow-delay="0.3s"
+              >
+                <img
+                  src="images/team/coordinator/meenu.jpeg"
+                  class="img-responsive"
+                  alt=""
+                />
+                <div class="team-hover">
+                  <div class="team-item">
+                    <ul class="social-icon">
+                      <li>
+                        <a
+                          href="https://www.facebook.com/meenu.dagar.374/"
+                          target="_blank"
+                          class="fa fa-facebook"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.instagram.com/dagar_meenu/"
+                          target="_blank"
+                          class="fa fa-instagram"
+                        ></a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:meenu.dagar_mba19@gla.ac.in"
+                          target="_blank"
+                          class="fa fa-envelope"
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="team-info">
+                <h4>Meenu Dagar</h4>
+                <h5>Handball</h5>
+                <p>
+                  <a href="tel:+917309908236" class="fa fa-mobile">
+                    +91-7309908236</a
+                  >
+                </p>
+              </div>
+            </div>
             <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow flipInX"
@@ -1900,7 +1973,10 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-3 col-sm-3">
+            
+          </div>
+          <div class="row">
+              <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow flipInX"
                 data-wow-delay="0.5s"
@@ -1948,8 +2024,6 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="row">
               <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow flipInX"
@@ -2048,54 +2122,7 @@
               </div>
             </div>
               
-              <div class="col-md-3 col-sm-3">
-              <div
-                class="team-card rounded team-thumb wow flipInX"
-                data-wow-delay="0.3s"
-              >
-                <img
-                  src="images/team/coordinator/meenu.jpeg"
-                  class="img-responsive"
-                  alt=""
-                />
-                <div class="team-hover">
-                  <div class="team-item">
-                    <ul class="social-icon">
-                      <li>
-                        <a
-                          href="https://www.facebook.com/meenu.dagar.374/"
-                          target="_blank"
-                          class="fa fa-facebook"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.instagram.com/dagar_meenu/"
-                          target="_blank"
-                          class="fa fa-instagram"
-                        ></a>
-                      </li>
-                      <li>
-                        <a
-                          href="mailto:meenu.dagar_mba19@gla.ac.in"
-                          target="_blank"
-                          class="fa fa-envelope"
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="team-info">
-                <h4>Meenu Dagar</h4>
-                <h5>Public Relation</h5>
-                <p>
-                  <a href="tel:+917309908236" class="fa fa-mobile">
-                    +91-7309908236</a
-                  >
-                </p>
-              </div>
-            </div>
+              
               <div class="col-md-3 col-sm-3">
               <div
                 class="team-card rounded team-thumb wow flipInX"
@@ -2228,8 +2255,7 @@
             <p style="color: white"> Developed by 
                 <a target="_blank" href="https://www.instagram.com/saksham_johri/">Saksham Johri</a>,
                 <a target="_blank" href="https://www.instagram.com/shreayansh/">Shreayansh Jaiswal</a>,
-                <a target="_blank" href="https://www.instagram.com/nihal.ary/">Nihal Arya</a>,
-                <a target="_blank" href="https://www.instagram.com/govindsharma345/">Govind Sharma</a>
+                <a target="_blank" href="https://www.instagram.com/nihal.ary/">Nihal Arya</a>
               
               </p>
           </div>
